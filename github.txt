@@ -1,2 +1,3 @@
 Git is connected to GitHub.
-Jenkins is integrated with GitHub.
+Jenkins is integrated with GitHubi.
+Jenkins can detect Git changes.
