@@ -1,2 +1,2 @@
-I am learning DevOps from the main branch.
+I am learning DevOps from the feature branch.
 Git is important for CI/CD.
