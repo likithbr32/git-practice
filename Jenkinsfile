@@ -27,22 +27,24 @@ pipeline {
             steps {
                 echo "Deploying ${APP_NAME}"
                 echo "Environment: ${APP_ENV}"
-                sh 'echo Deployment completed'
+
+                sh 'docker build -t ${APP_NAME}:latest .'
+                sh 'docker run -d --name ${APP_NAME} -p 8081:80 ${APP_NAME}:latest'
             }
         }
     }
 
     post {
+        always {
+            echo 'Pipeline finished.'
+        }
+
         success {
             echo 'Pipeline completed successfully!'
         }
 
         failure {
             echo 'Pipeline failed!'
-        }
-
-        always {
-            echo 'Pipeline finished.'
         }
     }
 }
