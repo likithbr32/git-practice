@@ -1,1 +1,2 @@
 Git is connected to GitHub.
+Jenkins is integrated with GitHub.
